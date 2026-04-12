@@ -4,9 +4,9 @@ import paho.mqtt.client as mqtt
 
 # Connect to public broker
 broker = "broker.hivemq.com"
-topic_temp = "factory/line1/temperature"
-topic_pressure = "factory/line1/pressure"
-topic_status = "factory/line1/status"
+topic_temp = "factory/line1/machine1/temperature"
+topic_pressure = "factory/line1/machine1/pressure"
+topic_status = "factory/line1/machine1/status"
 
 client = mqtt.Client(mqtt.CallbackAPIVersion.VERSION2)
 client.connect(broker, 1883)
