@@ -1,11 +1,17 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from database import get_latest_readings
+
 
 app = Flask(__name__)
 
 @app.route("/")
 def home():
     return "Factory Monitor is running"
+
+@app.route("/dashboard")
+def dashboard():
+    return render_template("dashboard.html")
+
 
 @app.route("/api/readings")
 def readings():
